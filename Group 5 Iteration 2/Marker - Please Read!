@@ -1,0 +1,11 @@
+The file BlokusDemo.jar (our limited release) should run upon being downloaded and double clicked.
+In the event that it doesn't run as specified please follow the instructions below.
+
+1. Download the file BlokusDemo.zip
+2. Extract the contents of that .zip file to a known directory
+3. Open a terminal window
+4. Change the directory to the location of the extracted files
+5. Enter the following command: javac *.java
+6. Enter the following command: java main
+
+Upon the completion of these steps, a window containing the main menu of the game should open.
