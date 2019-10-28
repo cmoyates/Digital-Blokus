@@ -1,1 +1,4 @@
 I confirm that I have participated in Iteration 2. Matthew Churchill
+I completed the tasks
+- Plan for Iteration 3
+- Minor Release of Application
