@@ -9,13 +9,13 @@ In the event that it doesn't run as specified please follow the instructions bel
 5. Close the window
 6. Double click the file
 
-In the event that this does not work download the ** file and follow the instructions below.
+In the event that this does not work download the BlokusSource.jar or BlokusSource.zip file and follow the instructions below.
 
 1. Extract the contents of that file to a known directory
 2. Open a terminal window
 3. Change the directory to the location of the extracted files
 4. Enter the following command: javac *.java
-5. Enter the following command: java main
+5. Enter the following command: java Main
 
 Upon the completion of these steps, a window containing the main menu of the game should open.
 
@@ -42,3 +42,8 @@ To test the save/load feature the following steps are recommended.
 Also the method of displaying the hints has not yet been implimented. 
 Because of this the only indications that can be seen are the state of the button, in the main menu and the board UI.
 The variable in the game class that determines whether or not the hints are being shown reflects the states of the buttons.
+
+
+
+If the file Piece.java is present in the source code, please ignore it. 
+It is an artifact of a previous version of the project that I have not figured out how to delete.
