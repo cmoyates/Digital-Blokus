@@ -1,0 +1,44 @@
+ 
+The file BlokusDemo.jar (our limited release) should run upon being downloaded and double clicked.
+In the event that it doesn't run as specified please follow the instructions below. 
+
+1. Right click on the file
+2. Click "Properties"
+3. Click on the "Permissions" tab
+4. Make sure that the "Allow executing file as program" box is checked
+5. Close the window
+6. Double click the file
+
+In the event that this does not work download the ** file and follow the instructions below.
+
+1. Extract the contents of that file to a known directory
+2. Open a terminal window
+3. Change the directory to the location of the extracted files
+4. Enter the following command: javac *.java
+5. Enter the following command: java main
+
+Upon the completion of these steps, a window containing the main menu of the game should open.
+
+
+
+As of this point the method for placing pieces on the board has yet to be implimented. 
+However, to test the saving and loading of the game a temporary method has been added. 
+This method makes the color of the squares on the board cycle between 5 options when clicked.
+These changes in color will be saved if the user saves their game.
+To test the save/load feature the following steps are recommended.
+
+1. Run the file using one of the methods detailed above.
+2. Select whatever settings are desired in the main menu.
+3. Click start to open the game board.
+4. Click on several squares on the board, some multiple times to get different colors.
+5. Click the x in the corner of the window.
+6. When prompted to save select "Yes".
+7. Run the file again.
+8. Click the "Resume" button
+9. Observe that all of the settings, and board pieces are the same as they were previously.
+
+
+
+Also the method of displaying the hints has not yet been implimented. 
+Because of this the only indications that can be seen are the state of the button, in the main menu and the board UI.
+The variable in the game class that determines whether or not the hints are being shown reflects the states of the buttons.
