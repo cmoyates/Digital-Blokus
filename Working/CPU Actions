@@ -1,0 +1,95 @@
+	void squareClick(BlockSquare temp)
+	{
+		for (int x = 0; x < 5; x++) 
+        {
+        	for (int y = 0; y < 5; y++) 
+	        {
+	        	if (temp.getFiveSurroundIndex(x, y) != null && ActivePiece[x][y] != 0) 
+	        	{
+	        		temp.getFiveSurroundIndex(x, y).changePlayerUsing(activePlayer.getPlayerNumber()+1);
+	        	}
+	        }
+        }
+		ActivePiece = emptyPiece;
+		ActivePieceCorners = emptyCorners;
+		
+		for (int j = 0; j < 21; j++) 
+		{
+			if (pieceButtons[j].equals(activePieceButton)) 
+			{
+				activePlayer.pieceUsed(j);
+				System.out.println("Getting rid of a piece");
+				System.out.println(String.valueOf(activePlayer.getAvailablePieces()[j]));
+			}
+		}
+		activePlayer = game.getPlayer((activePlayer.getPlayerNumber() + 1)%4);
+		System.out.println("New player number: " + String.valueOf(activePlayer.getPlayerNumber()));
+		
+		UpdatePieceSelection();
+	}
+	
+	void cwRotate()
+	{
+		int tempPiece[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		int tempCorners[][] = {{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0}};
+		for (int x = 0; x < 5; x++) 
+		{
+			for (int y = 0; y < 5; y++) 
+			{
+				tempPiece[x][y] = ActivePiece[4-y][x];
+			}
+		}
+		for (int x = 0; x < 7; x++) 
+		{
+			for (int y = 0; y < 7; y++) 
+			{
+				tempCorners[x][y] = ActivePieceCorners[6-y][x];
+			}
+		}
+		ActivePiece = tempPiece;
+		ActivePieceCorners = tempCorners;
+	}
+	
+	void ccwRotate()
+	{
+		int tempPiece[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		int tempCorners[][] = {{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0}};
+		for (int x = 0; x < 5; x++) 
+		{
+			for (int y = 0; y < 5; y++) 
+			{
+				tempPiece[x][y] = ActivePiece[y][4-x];
+			}
+		}
+		for (int x = 0; x < 7; x++) 
+		{
+			for (int y = 0; y < 7; y++) 
+			{
+				tempCorners[x][y] = ActivePieceCorners[y][6-x];
+			}
+		}
+		ActivePiece = tempPiece;
+		ActivePieceCorners = tempCorners;
+	}
+	
+	void flip()
+	{
+		int tempPiece[][] = {{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0},{0,0,0,0,0}};
+		int tempCorners[][] = {{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0},{0,0,0,0,0,0,0}};
+		for (int x = 0; x < 5; x++) 
+		{
+			for (int y = 0; y < 5; y++) 
+			{
+				tempPiece[x][y] = ActivePiece[x][4-y];
+			}
+		}
+		for (int x = 0; x < 7; x++) 
+		{
+			for (int y = 0; y < 7; y++) 
+			{
+				tempCorners[x][y] = ActivePieceCorners[x][6-y];
+			}
+		}
+		ActivePiece = tempPiece;
+		ActivePieceCorners = tempCorners;
+	}
