@@ -1,0 +1,40 @@
+	public BlockSquare testSquares()
+	{
+		Random rand = new Random(System.currentTimeMillis());
+		int corner = rand.nextInt(4);
+		for(int i=0;i<20;i++)
+		{
+			for(int j=0;j<20;i++)
+			{
+				if(corner == 0)
+				{
+					if(validatePlacement(new BlockSquare(i,j)))
+					{
+						return new BlockSquare(i,j);
+					}
+				}
+				else if(corner == 1)
+				{
+					if(validatePlacement(new BlockSquare(i,19-j)))
+					{
+						return new BlockSquare(i,19-j);
+					}
+				}
+				else if(corner == 2)
+				{
+					if(validatePlacement(new BlockSquare(19-i,19-j)))
+					{
+						return new BlockSquare(19-i,19-j);
+					}
+				}
+				else if(corner == 3)
+				{
+					if(validatePlacement(new BlockSquare(19-i,j)))
+					{
+						return new BlockSquare(19-i,j);
+					}
+				}
+			}
+		}
+		return null;
+	}
