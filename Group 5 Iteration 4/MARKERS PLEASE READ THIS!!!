@@ -1,3 +1,68 @@
-Alright, a few things that you should know before taking a look at our full release.
+Ok, this is it. The final "ReadMe". The final Iteration. The final release.
 
-First, it's not completely done. Everything is working aside from the 
+Probably the first thing that you will notice for our iteration 4 is that we didn't do the JUnit testing. 
+We were never very clear on how to to it in the first place, and we decided that our limitted time could 
+be better spent on other parts of the iteration.
+
+Second, as far as we are aware there are little to no bugs in the final relase.
+Of course, we have yet to stress test it through every possible scenario every possible way, but to the 
+best of our knoledge the final release of our version of Blokus deliver on the following promises:
+- It can play a 4 human player game.
+- It has the ability to choose the number of human players.
+- You can select both the color of your pieces and a character that will appear on each of your pieces squares.
+- You can select from 3 increasingly difficult difficulties (Easy, Medium, and Hard).
+- You can save and load a game from effectively any point (requires more testing to see if it works at any point).
+- It has a hint system that will reccommend posssible move to the player when enabled.
+
+The one possible feature that our final release is missing is the possibility of 2 and 3 player games.
+We determined that this would be outside of the scope of possibility given the time we had remaining.
+
+The major departure in design from the previous release would be the design of the board window.
+Previously the window showed only the board itself, but now it displays the board, 
+all of the pieces that can possibly be placed, a button to enable/disable hints, 
+and a series of buttons to change the orientation of the currenly selected piece.
+This departure from our previous design does, oddly enough, more closely resemble our original UI Prototype
+sketches from iteration 1. The main deviation from those would be the placement of the text that indicates 
+whose turn it is. This was changed for practicalities sake, as doingit the way originally specified would result
+in it taking up far too much space. Aside from that, the "Menu" square in the top left of the Prototype drawings
+was left out as it was fuund to be largely irrelevent.
+
+For more information about how all of the functionality was achieved, you can refer to the inline comments
+in the code.
+
+------------------------------------------------------------------------------------------------------------------
+
+The file Blokus.jar (our full release) should run upon being downloaded and double clicked.
+In the event that it doesn't run as specified please follow the instructions below. 
+
+1. Right click on the file
+2. Click "Properties"
+3. Click on the "Permissions" tab
+4. Make sure that the "Allow executing file as program" box is checked
+5. Close the window
+6. Double click the file
+
+In the event that this does not work, download the Blokus.zip file and follow the instructions below.
+
+1. Extract the contents of that file to a known directory
+2. Open a terminal window
+3. Change the directory to the location of the extracted files
+4. Enter the following command: javac *.java
+5. Enter the following command: java Main
+
+Upon the completion of these steps, a window containing the main menu of the game should open.
+
+To test the save/load feature the following steps are recommended.
+
+1. Run the file using one of the methods detailed above.
+2. Select whatever settings are desired in the main menu.
+3. Click start to open the game board.
+4. Place piecees as desired.
+5. Click the "X" in the corner of the window.
+6. When prompted to save, select "Yes".
+7. Run the file again.
+8. Click the "Resume" button
+9. Observe that all of the settings, board pieces, and almost everything else is the same as they were previously.
+
+Finally we would like to express our thanks for you grading these projects of ours.
+Thank you.
