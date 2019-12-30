@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DifficultyAI
+comment1.params=difficulty\ isCPUParam
+comment1.target=DifficultyAI(int,\ boolean)
+comment2.params=diff
+comment2.target=void\ setDifficulty(int)
+comment3.params=availablePieces
+comment3.target=int\ firstMove(boolean[])
+comment4.params=
+comment4.target=int\ subsequentMove()
+numComments=5

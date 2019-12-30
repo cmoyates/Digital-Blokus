@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=MenuUI
+comment1.params=gameObject
+comment1.target=MenuUI(Game)
+comment2.params=
+comment2.target=void\ setupGUI()
+comment3.params=resuming
+comment3.target=void\ openBoardUI(boolean)
+comment4.params=e
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+numComments=5

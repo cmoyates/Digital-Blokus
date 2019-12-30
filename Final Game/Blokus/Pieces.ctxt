@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Pieces
+comment1.params=
+comment1.target=Pieces()
+comment2.params=pieceName
+comment2.target=int[][]\ getPiece(java.lang.String)
+comment3.params=pieceName
+comment3.target=int[][]\ getCornerInfo(java.lang.String)
+numComments=4
